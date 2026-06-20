@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* AR Scanning laser line styling */
+@keyframes pan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+/* Add custom animations to style sheets */
+.animate-pan {
+  animation: pan 6s linear infinite;
+}
+
+.animate-progress {
+  animation: progress 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Custom scrollbar to keep layout highly cybernetic and integrated */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #03070d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #14324f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4e19;
+}
